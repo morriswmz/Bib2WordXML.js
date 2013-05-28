@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Conversion Test</title>
+	<style>
+textarea {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+p.btns {
+	text-align: center;
+}
+	</style>
+</head>
+<body>
+	<form action="">
+		<fieldset>
+			<legend>Input:</legend>
+			<textarea name="" id="inputTextarea" cols="30" rows="15"></textarea>
+		</fieldset>
+		<p class="btns"><a id="btnConvert" href="javascript:void(0)" onclick="window.convert()">Convert</a></p>
+		<fieldset>
+			<legend>Output:</legend>
+			<textarea name="" id="outputTextarea" cols="30" rows="15"></textarea>
+		</fieldset>
+	</form>
+	<script type="text/javascript" src="Bib2WordXML.js"></script>
+	<script>
+var inputTextarea = document.getElementById('inputTextarea'),
+	outputTextarea = document.getElementById('outputTextarea'),
+	btnConvert = document.getElementById('btnConvert');
+
+function convert() {
+	
+	outputTextarea.value = converter.convert(inputTextarea.value);
+}
+
+	</script>
+</body>
+</html>
