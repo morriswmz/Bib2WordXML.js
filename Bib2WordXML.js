@@ -5,7 +5,8 @@
 		"INCOLLECTION" : "BookSection",
 		"INPROCEEDINGS" : "ConferenceProceedings",
 		"MASTERSTHESIS" : "Masters Thesis",
-		"PHDTHESIS" : "PhD Thesis"
+		"PHDTHESIS" : "PhD Thesis",
+		"MISC" : "Misc"
 	};
 
 	var fieldDict = {
@@ -44,7 +45,7 @@
 			return {
 				leftIndex : initIdx,
 				rightIndex : i,
-				content : str.slice(initIdx + 1, i - initIdx)
+				content : str.slice(initIdx + 1, i)
 			};
 		},
 		_escapeHTMLTag : function (str) {
